@@ -48,7 +48,7 @@ public class CalculatorController extends HttpServlet {
         double width = Double.parseDouble(request.getParameter("length"));
         
         CalculatorService cs = new CalculatorService();
-        double area = cs.calculateArea(length, width);
+        double area = cs.getArea(length, width);
 
         request.setAttribute("area", area);
 
