@@ -15,8 +15,8 @@
     <p>
 
     <%
-        String welcome = (String)request.getAttribute("area");
-        out.print(welcome);
+        String area = (String)request.getAttribute("area");
+        out.print(area);
     %>
     
     <p><a href="calculator.html">Back
