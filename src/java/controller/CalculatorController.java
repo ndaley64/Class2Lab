@@ -13,7 +13,7 @@ import model.CalculatorService;
  *
  * @author Nathaniel
  */
-@WebServlet(name = "welcomeController", urlPatterns = {"/greeter"})
+@WebServlet(name = "welcomeController", urlPatterns = {"/calculator"})
 public class CalculatorController extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

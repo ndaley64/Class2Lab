@@ -9,17 +9,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome Message</title>
+        <title>Area</title>
     </head>
     <body>
     <p>
 
     <%
-        String welcome = (String)request.getAttribute("welcomeMessage");
+        String welcome = (String)request.getAttribute("area");
         out.print(welcome);
     %>
     
-    <p><a href="welcome.html">Back
+    <p><a href="calculator.html">Back
     
     </body>
 </html>
