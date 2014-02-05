@@ -43,12 +43,23 @@ public class CalculatorController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        double length = Double.parseDouble(request.getParameter("length"));
-        double width = Double.parseDouble(request.getParameter("length"));
-        
         CalculatorService cs = new CalculatorService();
-        double area = cs.getArea(length, width);
+        
+        String calcType = request.getParameter("calcType");
+        double area = 0;
+        
+        if(calcType.equals("rectangle")){
+            double length = Double.parseDouble(request.getParameter("length"));
+            double width = Double.parseDouble(request.getParameter("width"));
+            area = cs.getRectangleArea(length, width);
+        }else if(calcType.equals("circle")){
+            double radius = Double.parseDouble(request.getParameter("radius"));
+            area = cs.getCircleArea(radius);
+        }else if(calcType.equals("triangle")){
+            double base = Double.parseDouble(request.getParameter("base"));
+            double height = Double.parseDouble(request.getParameter("height"));
+            area = cs.getTriangleArea(base, height);
+        }
 
         request.setAttribute("area", area);
 

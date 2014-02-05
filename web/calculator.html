@@ -10,12 +10,35 @@ and open the template in the editor.
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <form id="form1" name="form1" method="POST" action="calculator">
+        <form id="form1" name="form1" method="POST" action="front?calcType=rectangle">
+            <h3>Rectangle Calculator</h3>
             <p>Please insert a length and width.<p>
             <p>Length:
                 <input id="length" type="text" name="legth">
                 <br>Width:
                 <input id="width" type="text" name="width">
+            </p>
+            <center>
+                <input id="submit" name="submit" type="submit" value="Submit">
+            </center>
+        </form>
+        <form id="form2" name="form2" method="POST" action="front?calcType=circle">
+            <h3>Circle Calculator</h3>
+            <p>Please insert a radius.<p>
+            <p>Radius:
+                <input id="radius" type="text" name="radius">
+            </p>
+            <center>
+                <input id="submit" name="submit" type="submit" value="Submit">
+            </center>
+        </form>
+        <form id="form3" name="form3" method="POST" action="front?calcType=triangle">
+            <h3>Triangle</h3>
+            <p>Please insert a base and height.<p>
+            <p>Base:
+                <input id="base" type="text" name="base">
+                <br>Height:
+                <input id="height" type="text" name="height">
             </p>
             <center>
                 <input id="submit" name="submit" type="submit" value="Submit">
